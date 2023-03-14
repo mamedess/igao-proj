@@ -17,6 +17,10 @@ function dateOfToday() {
 
 function initialize() {
     dateOfToday();
+
+    // window.addEventListener('contextmenu', (ev) => {
+    //     ev.preventDefault();
+    //   });
 }
 
 window.onload = () => initialize();
