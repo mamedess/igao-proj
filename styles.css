@@ -52,6 +52,7 @@ body {
 }
 
 .button-subscribe {
+    cursor: pointer;
     margin-top: 20px;
     padding: 20px 0px 10px 0px;
     line-height: 18px;
@@ -195,6 +196,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: start;
+    margin-bottom: 5px;
 }
 
 .icone-texto>img {
@@ -207,7 +209,7 @@ body {
     height: 300px;
     outline: 5px red solid;
     margin-bottom: 10px;
-    padding-bottom: 21px;
+    padding-bottom: 29px;
 }
 
 .container-conteudo {
