@@ -5,14 +5,13 @@ function goToCheckout() {
 
 function dateOfToday() {
     const data = document.getElementById("data");
+    let semana = new Array("Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado")
+    let meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+   
+    let userOffset = new Date().getTimezoneOffset() * 60000;
+    let userDate = new Date(Date.now() - userOffset);
 
-    if (data) {
-        let hoje = new Date();
-        let semana = new Array("Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado")
-        let meses = new Array("Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
-        
-        data.innerText = `${semana[hoje.getDay()]}, ${hoje.getDate()} de ${meses[hoje.getMonth()]} de ${hoje.getFullYear()}`
-    }
+    data.innerText = `Oferta disponível até: ${semana[userDate.getDay()]}, ${userDate.getDate()} de ${meses[userDate.getMonth()]} de ${userDate.getFullYear()}`
 }
 
 function initialize() {
@@ -20,7 +19,10 @@ function initialize() {
 
     window.addEventListener('contextmenu', (ev) => {
         ev.preventDefault();
-      });
+    });
 }
 
-window.onload = () => initialize();
+window.addEventListener('DOMContentLoaded', () => {
+    initialize();
+});
+
