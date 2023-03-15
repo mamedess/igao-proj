@@ -279,6 +279,23 @@ body {
     }
 
     .container-conteudo {
+        max-width: 406px;
+    }
+
+    .container-video {
+        min-width: 406px;
+        height: 200px;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .top-text {
+        font-size: 23px;
+        line-height: 20px;
+    }
+
+    .container-conteudo {
         max-width: 300px;
     }
 
