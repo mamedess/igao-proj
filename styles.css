@@ -187,7 +187,7 @@ body {
     margin-top: 70px;
     line-height: 15px;
     text-align: center;
-    width: 100%;
+    width: 75%;
     padding: 0 20px;
 }
 
@@ -264,6 +264,11 @@ body {
     }
 }
 
+@media (max-width: 1010px) {
+    .disclaimer {
+        width: 96%;
+    }
+}
 
 @media (max-width: 571px) {
     .top-text {
